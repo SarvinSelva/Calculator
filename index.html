@@ -6,7 +6,7 @@
 <script>
 	var ans=1;
 	var flag=0;
-	var t=0;
+	var t=0,m=0;
 	function insert(num)
 	{
 		document.form.textview.value=document.form.textview.value+num;
@@ -34,7 +34,7 @@
 				}
 				else if(exp.includes("^"))
 				{
-					document.form.textview.value=Math.pow(t,2);
+					document.form.textview.value=Math.pow(m,t);
 				}
 				else
 				{
@@ -70,6 +70,7 @@
 	}
 	function square()
 	{
+		m=t;
 		t=0;
 		document.form.textview.value=document.form.textview.value+"^";
 	}
